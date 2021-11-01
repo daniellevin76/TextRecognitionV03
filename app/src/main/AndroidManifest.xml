@@ -14,7 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CamperaXKotlin">
         <activity
-            android:name=".TextRecognition"
+            android:name=".TextRecognitionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReadInActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

@@ -16,7 +16,6 @@ import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.File
-import java.nio.ByteBuffer
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.ExecutorService
@@ -41,8 +40,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Set up the listener for take photo button
-        camera_capture_button.setOnClickListener { takePhoto()
-        switchActivity()}
+        camera_capture_button.setOnClickListener {
+            takePhoto()
+        switchActivity()
+        }
 
         outputDirectory = getOutputDirectory()
 
@@ -50,7 +51,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun switchActivity() {
-        val intent = Intent(this,TextRecognition::class.java)
+        val intent = Intent(this, ReadInActivity::class.java)
         startActivity(intent)
     }
 
